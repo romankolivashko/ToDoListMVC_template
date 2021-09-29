@@ -32,6 +32,9 @@ namespace ToDoList.Models
 
     public static Item Find(int searchId)
     {
+      //good fail because the function doesn't do what it's supposed to do
+      // Item wrongItem = new Item("stuff");
+      // return wrongItem;
       return _instances[searchId-1];
     }
 

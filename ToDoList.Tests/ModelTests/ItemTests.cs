@@ -110,5 +110,21 @@ namespace ToDoList.Tests
       //Assert
       Assert.AreEqual(newItem2, result);
     }
+
+    [TestMethod]
+    public void Find_FindItemsWithTheId_Int()
+    {
+      //Arrange - create an item so we have some data to test
+      string description01 = "Walk the dog";
+      Item newItem = new Item(description01);
+
+      //Act - call the function we're testing
+      Item foundItem = Item.Find(1);
+      int resultId = foundItem.Id;
+      int expectedId = newItem.Id;
+
+      //Assert
+      Assert.AreEqual(expectedId, resultId);
+    }
   }
 }
